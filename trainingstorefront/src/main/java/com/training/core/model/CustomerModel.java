@@ -30,6 +30,9 @@ public class CustomerModel
 	@Column(name="CREATION_TIME")
 	private Date creationTime;
 	
+	@Column(name="PASSWORD")
+	private String password;
+	
 	public Long getId() {
 		return id;
 	}
@@ -65,5 +68,11 @@ public class CustomerModel
 	}
 	public void setCreationTime(Date creationTime) {
 		this.creationTime = creationTime;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

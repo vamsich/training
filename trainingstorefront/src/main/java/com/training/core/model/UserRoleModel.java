@@ -1,5 +1,7 @@
 package com.training.core.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,6 +17,9 @@ public class UserRoleModel
 	@Column(name="ROLE")
 	private String role;
 	
+	@Column(name="CREATION_TIME")
+	private Date creationTime;
+	
 	public Long getId() {
 		return id;
 	}
@@ -27,9 +32,10 @@ public class UserRoleModel
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
-	@Override
-	public String toString() {
-		return "UserRoleModel [id=" + id + ", role=" + role + "]";
+	public Date getCreationTime() {
+		return creationTime;
+	}
+	public void setCreationTime(Date creationTime) {
+		this.creationTime = creationTime;
 	}
 }
