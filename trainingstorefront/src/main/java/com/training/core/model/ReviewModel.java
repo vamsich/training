@@ -1,5 +1,7 @@
 package com.training.core.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +23,9 @@ public class ReviewModel
 	private String comment;
 	
 	private CustomerModel customer;
+	
+	@Column(name="CREATION_TIME")
+	private Date creationTime;
 	
 	public Long getId() {
 		return id;
