@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,9 +21,11 @@ public class ReviewModel
 	@Column(name="RATING")
 	private Integer rating;
 	
-	@Column(name="RATING")
+	@Column(name="COMMENT")
 	private String comment;
 	
+	@OneToOne
+	@JoinColumn(name="CUSTOMER")
 	private CustomerModel customer;
 	
 	@Column(name="CREATION_TIME")
@@ -51,4 +55,5 @@ public class ReviewModel
 	public void setCustomer(CustomerModel customer) {
 		this.customer = customer;
 	}
+	
 }
