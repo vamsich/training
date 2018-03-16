@@ -1,5 +1,8 @@
 package com.training.core.service;
 
-public class CustomerService {
+import com.training.core.model.CustomerModel;
 
+public interface CustomerService 
+{
+	void saveCustomer(CustomerModel customerModel);
 }
