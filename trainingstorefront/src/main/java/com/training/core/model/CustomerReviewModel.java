@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="REVIEW")
-public class ReviewModel 
+public class CustomerReviewModel 
 {
 	@Id
 	@GeneratedValue

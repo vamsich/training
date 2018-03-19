@@ -1,8 +1,8 @@
 package com.training.core.dao;
 
-import com.training.core.model.ReviewModel;
+import com.training.core.model.CustomerReviewModel;
 
 public interface ReviewDao 
 {
-	void saveReview(ReviewModel reviewModel);
+	void saveReview(CustomerReviewModel reviewModel);
 }
