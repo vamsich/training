@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -27,6 +28,10 @@ public class ExperienceModel
 	@OneToMany
 	@JoinColumn(name="fields")
 	private List<Field> fields;
+	
+	@OneToOne
+	@JoinColumn(name="CUSTOMER")
+	private CustomerModel customer;
 	
 	public Long getId() {
 		return id;
@@ -50,6 +55,22 @@ public class ExperienceModel
 
 	public void setMonths(Integer months) {
 		this.months = months;
+	}
+
+	public List<Field> getFields() {
+		return fields;
+	}
+
+	public void setFields(List<Field> fields) {
+		this.fields = fields;
+	}
+
+	public CustomerModel getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(CustomerModel customer) {
+		this.customer = customer;
 	}
 	
 }
