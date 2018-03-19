@@ -1,6 +1,7 @@
 package com.training.core.service.impl;
 
 import javax.annotation.Resource;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ public class DefaultReviewService implements ReviewService
 	private ReviewDao reviewDao;
 	
 	@Override
+	@Transactional
 	public void saveReview(CustomerReviewModel reviewModel) 
 	{
 		reviewDao.saveReview(reviewModel);
