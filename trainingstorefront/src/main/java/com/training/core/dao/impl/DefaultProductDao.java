@@ -1,10 +1,12 @@
 package com.training.core.dao.impl;
 
 import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
 
 import com.training.core.dao.ProductDao;
 import com.training.core.model.ProductModel;
 
+@Repository("productDao")
 public class DefaultProductDao implements ProductDao
 {
 	private SessionFactory sessionFactory;
