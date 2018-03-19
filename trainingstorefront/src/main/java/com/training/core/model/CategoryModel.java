@@ -27,5 +27,44 @@ public class CategoryModel
 	
 	@Column(name="HAS_SUB_CATEGORIES")
 	private Boolean hasSubCategories;
-	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Date getCreationTime() {
+		return creationTime;
+	}
+
+	public void setCreationTime(Date creationTime) {
+		this.creationTime = creationTime;
+	}
+
+	public Boolean getHasSubCategories() {
+		return hasSubCategories;
+	}
+
+	public void setHasSubCategories(Boolean hasSubCategories) {
+		this.hasSubCategories = hasSubCategories;
+	}
 }
