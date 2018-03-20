@@ -33,6 +33,9 @@ public class CustomerModel
 	@Column(name="PASSWORD")
 	private String password;
 	
+	@Column(name="DOB")
+	private Date dateOfBirth;
+	
 	public Long getId() {
 		return id;
 	}
@@ -75,4 +78,11 @@ public class CustomerModel
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	
 }

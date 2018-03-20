@@ -29,6 +29,9 @@ public class ExperienceModel
 	@JoinColumn(name="fields")
 	private List<Field> fields;
 	
+	@Column(name="SUMMARY")
+	private String summary;
+	
 	@OneToOne
 	@JoinColumn(name="CUSTOMER")
 	private CustomerModel customer;
