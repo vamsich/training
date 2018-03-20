@@ -75,5 +75,14 @@ public class ExperienceModel
 	public void setCustomer(CustomerModel customer) {
 		this.customer = customer;
 	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+	
 	
 }
